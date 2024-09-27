@@ -1,0 +1,18 @@
+<div class="icon-container">
+  <h1>{{ title }}</h1>
+  <svg 
+    *ngIf="iconPath"
+    [attr.width]="size" 
+    [attr.height]="size" 
+    viewBox="0 0 30 30" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg">
+    <path 
+      [attr.d]="iconPath" 
+      [attr.stroke]="color" 
+      [attr.stroke-width]="1" 
+      stroke-linecap="round" 
+      stroke-linejoin="round"/>
+  </svg>
+  <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div> 
+</div>
